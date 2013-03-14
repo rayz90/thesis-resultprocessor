@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SMAA-TRI-model optimisticRule="true" name="SMAA-TRI Model"
+	modelVersion="3">
+	<alternatives>
+		<alternative id="0" name="Relay Attack - Privacy Infringement" />
+		<alternative id="1" name="Relay Attack - Single malicious trans." />
+		<alternative id="2" name="Relay Attack with App - Multiple malicious trans." />
+		<alternative id="3" name="Eavesdropping using malicious app - Privacy Infringement" />
+		<alternative id="4" name="Eavesdropping - Privacy Infringement" />
+		<alternative id="5" name="Eavesdropping exploiting terminal - Privacy Infringement" />
+		<alternative id="6" name="Modify transactions by exploiting terminal - Single malicious trans." />
+		<alternative id="7" name="Malicious terminal - Multiple malicious trans." />
+		<alternative id="8" name="DoS using 0day - Disable service" />
+		<alternative id="9" name="DoS on terminal - Disable service" />
+		<alternative id="10" name="Theft - Privacy Infringement" />
+		<alternative id="11" name="Theft - Multiple malicious trans." />
+	</alternatives>
+	<criteria>
+		<criterion class="outrankingCriterion" id="12" name="Time">
+			<ascending value="true" />
+			<indifferenceTH class="interval" start="1.0" end="1.0" />
+			<preferenceTH class="interval" start="2.0" end="2.0" />
+		</criterion>
+		<criterion class="outrankingCriterion" id="13" name="Expertise">
+			<ascending value="true" />
+			<indifferenceTH class="interval" start="1.0" end="1.0" />
+			<preferenceTH class="interval" start="2.0" end="2.0" />
+		</criterion>
+		<criterion class="outrankingCriterion" id="14" name="Knowledge">
+			<ascending value="true" />
+			<indifferenceTH class="exact" value="1.0" />
+			<preferenceTH class="exact" value="2.0" />
+		</criterion>
+		<criterion class="outrankingCriterion" id="15" name="Opportunity">
+			<ascending value="true" />
+			<indifferenceTH class="interval" start="1.0" end="1.0" />
+			<preferenceTH class="interval" start="2.0" end="2.0" />
+		</criterion>
+		<criterion class="outrankingCriterion" id="16" name="Equipment">
+			<ascending value="true" />
+			<indifferenceTH class="exact" value="1.0" />
+			<preferenceTH class="exact" value="2.0" />
+		</criterion>
+	</criteria>
+	<measurements></measurements>
+	<preferences class="ordinalPreferences" id="17">
+		<preference>
+			<criterion class="outrankingCriterion" ref="12" />
+			<value class="rank" rank="2" />
+		</preference>
+		<preference>
+			<criterion class="outrankingCriterion" ref="13" />
+			<value class="rank" rank="1" />
+		</preference>
+		<preference>
+			<criterion class="outrankingCriterion" ref="14" />
+			<value class="rank" rank="4" />
+		</preference>
+		<preference>
+			<criterion class="outrankingCriterion" ref="15" />
+			<value class="rank" rank="3" />
+		</preference>
+		<preference>
+			<criterion class="outrankingCriterion" ref="16" />
+			<value class="rank" rank="5" />
+		</preference>
+	</preferences>
+	<lambda start="0.65" end="0.85" />
+	<categories>
+		<category id="18" name="High" />
+		<category id="19" name="Medium" />
+		<category id="20" name="Low" />
+	</categories>
+	<upperBounds>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="12" />
+			<value class="exact" value="2.0" />
+			<alternative ref="18" />
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="12" />
+			<value class="exact" value="4.0" />
+			<alternative ref="19" />
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="13" />
+			<value class="exact" value="2.0" />
+			<alternative ref="18" />
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="13" />
+			<value class="exact" value="4.0" />
+			<alternative ref="19" />
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="14" />
+			<value class="exact" value="2.0" />
+			<alternative ref="18" />
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="14" />
+			<value class="exact" value="4.0" />
+			<alternative ref="19" />
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="15" />
+			<value class="exact" value="2.0" />
+			<alternative ref="18" />
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="15" />
+			<value class="exact" value="4.0" />
+			<alternative ref="19" />
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="16" />
+			<value class="exact" value="2.0" />
+			<alternative ref="18" />
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="16" />
+			<value class="exact" value="4.0" />
+			<alternative ref="19" />
+		</measurement>
+	</upperBounds>
+</SMAA-TRI-model>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SMAA-TRI-model optimisticRule="false" name="SMAA-TRI Model" modelVersion="3">
+	<alternatives>
+		<alternative id="0" name="Relay Attack"/>
+		<alternative id="1" name="Relay Attack with app"/>
+		<alternative id="2" name="Eavesdropping with app"/>
+		<alternative id="3" name="Eavesdropping"/>
+		<alternative id="4" name="Eavesdropping exploiting terminal"/>
+		<alternative id="5" name="Modify transactions on terminal"/>
+		<alternative id="6" name="Malicious terminal"/>
+		<alternative id="7" name="DoS using zero-day"/>
+		<alternative id="8" name="DoS on terminal"/>
+		<alternative id="9" name="Theft"/>
+	</alternatives>
+	<criteria>
+		<criterion class="outrankingCriterion" id="10" name="Time">
+			<ascending value="true"/>
+			<indifferenceTH class="interval" start="1.0" end="1.0"/>
+			<preferenceTH class="interval" start="2.0" end="2.0"/>
+		</criterion>
+		<criterion class="outrankingCriterion" id="11" name="Expertise">
+			<ascending value="true"/>
+			<indifferenceTH class="interval" start="1.0" end="1.0"/>
+			<preferenceTH class="interval" start="2.0" end="2.0"/>
+		</criterion>
+		<criterion class="outrankingCriterion" id="12" name="Knowledge">
+			<ascending value="true"/>
+			<indifferenceTH class="exact" value="1.0"/>
+			<preferenceTH class="exact" value="2.0"/>
+		</criterion>
+		<criterion class="outrankingCriterion" id="13" name="Opportunity">
+			<ascending value="true"/>
+			<indifferenceTH class="interval" start="1.0" end="1.0"/>
+			<preferenceTH class="interval" start="2.0" end="2.0"/>
+		</criterion>
+		<criterion class="outrankingCriterion" id="14" name="Equipment">
+			<ascending value="true"/>
+			<indifferenceTH class="exact" value="1.0"/>
+			<preferenceTH class="exact" value="2.0"/>
+		</criterion>
+	</criteria>
+	<measurements></measurements>
+<preferences class="ordinalPreferences" id="15">
+		<preference>
+			<criterion class="outrankingCriterion" ref="10"/>
+			<value class="rank" rank="2"/>
+		</preference>
+		<preference>
+			<criterion class="outrankingCriterion" ref="11"/>
+			<value class="rank" rank="1"/>
+		</preference>
+		<preference>
+			<criterion class="outrankingCriterion" ref="12"/>
+			<value class="rank" rank="4"/>
+		</preference>
+		<preference>
+			<criterion class="outrankingCriterion" ref="13"/>
+			<value class="rank" rank="3"/>
+		</preference>
+		<preference>
+			<criterion class="outrankingCriterion" ref="14"/>
+			<value class="rank" rank="5"/>
+		</preference>
+	</preferences>
+	<lambda start="0.65" end="0.85"/>
+	<categories>
+		<category id="16" name="Likely"/>
+		<category id="17" name="Possible"/>
+		<category id="18" name="Unlikely"/>
+	</categories>
+	<upperBounds>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="10"/>
+			<value class="exact" value="2.0"/>
+			<alternative ref="16"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="10"/>
+			<value class="exact" value="4.0"/>
+			<alternative ref="17"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="11"/>
+			<value class="exact" value="2.0"/>
+			<alternative ref="16"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="11"/>
+			<value class="exact" value="4.0"/>
+			<alternative ref="17"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="12"/>
+			<value class="exact" value="2.0"/>
+			<alternative ref="16"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="12"/>
+			<value class="exact" value="4.0"/>
+			<alternative ref="17"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="13"/>
+			<value class="exact" value="2.0"/>
+			<alternative ref="16"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="13"/>
+			<value class="exact" value="4.0"/>
+			<alternative ref="17"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="14"/>
+			<value class="exact" value="2.0"/>
+			<alternative ref="16"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="14"/>
+			<value class="exact" value="4.0"/>
+			<alternative ref="17"/>
+		</measurement>
+	</upperBounds>
+</SMAA-TRI-model>

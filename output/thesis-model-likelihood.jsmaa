@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SMAA-TRI-model modelVersion="3" name="SMAA-TRI Model" optimisticRule="false">
+	<alternatives>
+		<alternative id="0" name="Relay Attack"/>
+		<alternative id="1" name="Relay Attack with app"/>
+		<alternative id="2" name="Eavesdropping with app"/>
+		<alternative id="3" name="Eavesdropping"/>
+		<alternative id="4" name="Eavesdropping exploiting terminal"/>
+		<alternative id="5" name="Modify transactions on terminal"/>
+		<alternative id="6" name="Malicious terminal"/>
+		<alternative id="7" name="DoS using zero-day"/>
+		<alternative id="8" name="DoS on terminal"/>
+		<alternative id="9" name="Theft"/>
+	</alternatives>
+	<criteria>
+		<criterion class="outrankingCriterion" id="10" name="Time">
+			<ascending value="true"/>
+			<indifferenceTH class="interval" end="1.0" start="1.0"/>
+			<preferenceTH class="interval" end="2.0" start="2.0"/>
+		</criterion>
+		<criterion class="outrankingCriterion" id="11" name="Expertise">
+			<ascending value="true"/>
+			<indifferenceTH class="interval" end="1.0" start="1.0"/>
+			<preferenceTH class="interval" end="2.0" start="2.0"/>
+		</criterion>
+		<criterion class="outrankingCriterion" id="12" name="Knowledge">
+			<ascending value="true"/>
+			<indifferenceTH class="exact" value="1.0"/>
+			<preferenceTH class="exact" value="2.0"/>
+		</criterion>
+		<criterion class="outrankingCriterion" id="13" name="Opportunity">
+			<ascending value="true"/>
+			<indifferenceTH class="interval" end="1.0" start="1.0"/>
+			<preferenceTH class="interval" end="2.0" start="2.0"/>
+		</criterion>
+		<criterion class="outrankingCriterion" id="14" name="Equipment">
+			<ascending value="true"/>
+			<indifferenceTH class="exact" value="1.0"/>
+			<preferenceTH class="exact" value="2.0"/>
+		</criterion>
+	</criteria>
+	<measurements>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="10"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.01200000"/>
+          <point x="1.0" y="0.15870000"/>
+          <point x="2.0" y="0.27660000"/>
+          <point x="3.0" y="0.15610000"/>
+          <point x="4.0" y="0.03520000"/>
+          <point x="5.0" y="0.00460000"/>
+          <point x="6.0" y="0.03240000"/>
+          <point x="20.0" y="0.32430000"/>
+          <point x="24.0" y="0.00010000"/>
+        </points>
+      </value>
+      <alternative ref="0"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="11"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.12910000"/>
+          <point x="2.0" y="0.42810000"/>
+          <point x="5.0" y="0.44280000"/>
+        </points>
+      </value>
+      <alternative ref="0"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="12"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.88570000"/>
+          <point x="1.0" y="0.11430000"/>
+        </points>
+      </value>
+      <alternative ref="0"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="13"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.03510000"/>
+          <point x="1.0" y="0.52720000"/>
+          <point x="12.0" y="0.11710000"/>
+          <point x="4.0" y="0.32060000"/>
+        </points>
+      </value>
+      <alternative ref="0"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="14"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.55640000"/>
+          <point x="3.0" y="0.44360000"/>
+        </points>
+      </value>
+      <alternative ref="0"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="10"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="1.0" y="0.00000000"/>
+          <point x="2.0" y="0.18890000"/>
+          <point x="3.0" y="0.12200000"/>
+          <point x="4.0" y="0.01930000"/>
+          <point x="5.0" y="0.11710000"/>
+          <point x="6.0" y="0.15610000"/>
+          <point x="8.0" y="0.03270000"/>
+          <point x="10.0" y="0.03960000"/>
+          <point x="20.0" y="0.32420000"/>
+          <point x="12.0" y="0.00010000"/>
+        </points>
+      </value>
+      <alternative ref="1"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="11"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="2.0" y="0.41650000"/>
+          <point x="5.0" y="0.58350000"/>
+        </points>
+      </value>
+      <alternative ref="1"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="12"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.47340000"/>
+          <point x="1.0" y="0.47970000"/>
+          <point x="4.0" y="0.03490000"/>
+          <point x="10.0" y="0.01200000"/>
+        </points>
+      </value>
+      <alternative ref="1"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="13"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.07070000"/>
+          <point x="1.0" y="0.80000000"/>
+          <point x="4.0" y="0.12840000"/>
+          <point x="12.0" y="0.00090000"/>
+        </points>
+      </value>
+      <alternative ref="1"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="14"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.72590000"/>
+          <point x="3.0" y="0.11800000"/>
+          <point x="7.0" y="0.15610000"/>
+        </points>
+      </value>
+      <alternative ref="1"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="10"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="1.0" y="0.16600000"/>
+          <point x="2.0" y="0.03580000"/>
+          <point x="4.0" y="0.12870000"/>
+          <point x="5.0" y="0.11710000"/>
+          <point x="6.0" y="0.03490000"/>
+          <point x="8.0" y="0.28860000"/>
+          <point x="10.0" y="0.16070000"/>
+          <point x="12.0" y="0.06820000"/>
+        </points>
+      </value>
+      <alternative ref="2"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="11"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="2.0" y="0.33980000"/>
+          <point x="5.0" y="0.62450000"/>
+          <point x="5.0" y="0.03570000"/>
+        </points>
+      </value>
+      <alternative ref="2"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="12"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.08400000"/>
+          <point x="1.0" y="0.84790000"/>
+          <point x="4.0" y="0.06810000"/>
+        </points>
+      </value>
+      <alternative ref="2"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="13"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.04080000"/>
+          <point x="1.0" y="0.64550000"/>
+          <point x="12.0" y="0.03570000"/>
+          <point x="4.0" y="0.27800000"/>
+        </points>
+      </value>
+      <alternative ref="2"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="14"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.69110000"/>
+          <point x="3.0" y="0.15280000"/>
+          <point x="7.0" y="0.15610000"/>
+        </points>
+      </value>
+      <alternative ref="2"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="10"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.15300000"/>
+          <point x="1.0" y="0.00000000"/>
+          <point x="2.0" y="0.05520000"/>
+          <point x="3.0" y="0.00020000"/>
+          <point x="4.0" y="0.00010000"/>
+          <point x="6.0" y="0.27150000"/>
+          <point x="8.0" y="0.44920000"/>
+          <point x="12.0" y="0.00020000"/>
+          <point x="15.0" y="0.03570000"/>
+          <point x="16.0" y="0.03490000"/>
+        </points>
+      </value>
+      <alternative ref="3"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="11"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.15300000"/>
+          <point x="2.0" y="0.04800000"/>
+          <point x="5.0" y="0.72840000"/>
+          <point x="5.0" y="0.07060000"/>
+        </points>
+      </value>
+      <alternative ref="3"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="12"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.80710000"/>
+          <point x="1.0" y="0.12230000"/>
+          <point x="4.0" y="0.07060000"/>
+        </points>
+      </value>
+      <alternative ref="3"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="13"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.04690000"/>
+          <point x="1.0" y="0.58740000"/>
+          <point x="12.0" y="0.04150000"/>
+          <point x="4.0" y="0.32420000"/>
+        </points>
+      </value>
+      <alternative ref="3"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="14"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.18890000"/>
+          <point x="3.0" y="0.60720000"/>
+          <point x="7.0" y="0.20390000"/>
+        </points>
+      </value>
+      <alternative ref="3"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="10"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="2.0" y="0.15300000"/>
+          <point x="3.0" y="0.00570000"/>
+          <point x="5.0" y="0.00000000"/>
+          <point x="6.0" y="0.13400000"/>
+          <point x="8.0" y="0.00670000"/>
+          <point x="10.0" y="0.06260000"/>
+          <point x="12.0" y="0.00110000"/>
+          <point x="20.0" y="0.19110000"/>
+          <point x="26.0" y="0.12170000"/>
+          <point x="24.0" y="0.32410000"/>
+        </points>
+      </value>
+      <alternative ref="4"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="11"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="2.0" y="0.00570000"/>
+          <point x="5.0" y="0.92360000"/>
+          <point x="5.0" y="0.07070000"/>
+        </points>
+      </value>
+      <alternative ref="4"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="12"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="1.0" y="0.33190000"/>
+          <point x="10.0" y="0.03570000"/>
+          <point x="4.0" y="0.63240000"/>
+        </points>
+      </value>
+      <alternative ref="4"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="13"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.05160000"/>
+          <point x="1.0" y="0.28850000"/>
+          <point x="4.0" y="0.37830000"/>
+          <point x="26.0" y="0.11710000"/>
+          <point x="12.0" y="0.16450000"/>
+        </points>
+      </value>
+      <alternative ref="4"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="14"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.32510000"/>
+          <point x="3.0" y="0.51860000"/>
+          <point x="7.0" y="0.15610000"/>
+          <point x="7.0" y="0.00020000"/>
+        </points>
+      </value>
+      <alternative ref="4"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="10"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="2.0" y="0.15300000"/>
+          <point x="3.0" y="0.00570000"/>
+          <point x="6.0" y="0.13400000"/>
+          <point x="8.0" y="0.00650000"/>
+          <point x="10.0" y="0.03010000"/>
+          <point x="12.0" y="0.03350000"/>
+          <point x="16.0" y="0.00010000"/>
+          <point x="20.0" y="0.15620000"/>
+          <point x="26.0" y="0.15680000"/>
+          <point x="24.0" y="0.32410000"/>
+        </points>
+      </value>
+      <alternative ref="5"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="11"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="2.0" y="0.00570000"/>
+          <point x="5.0" y="0.91160000"/>
+          <point x="5.0" y="0.08270000"/>
+        </points>
+      </value>
+      <alternative ref="5"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="12"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.03010000"/>
+          <point x="1.0" y="0.13960000"/>
+          <point x="10.0" y="0.16410000"/>
+          <point x="4.0" y="0.66620000"/>
+        </points>
+      </value>
+      <alternative ref="5"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="13"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.04690000"/>
+          <point x="1.0" y="0.29310000"/>
+          <point x="4.0" y="0.34600000"/>
+          <point x="26.0" y="0.11710000"/>
+          <point x="12.0" y="0.19690000"/>
+        </points>
+      </value>
+      <alternative ref="5"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="14"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.32510000"/>
+          <point x="3.0" y="0.48290000"/>
+          <point x="7.0" y="0.19200000"/>
+        </points>
+      </value>
+      <alternative ref="5"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="10"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="1.0" y="0.01200000"/>
+          <point x="2.0" y="0.15300000"/>
+          <point x="3.0" y="0.12200000"/>
+          <point x="4.0" y="0.12280000"/>
+          <point x="8.0" y="0.00110000"/>
+          <point x="10.0" y="0.03010000"/>
+          <point x="12.0" y="0.29500000"/>
+          <point x="14.0" y="0.03240000"/>
+          <point x="16.0" y="0.03500000"/>
+          <point x="20.0" y="0.19200000"/>
+          <point x="26.0" y="0.00460000"/>
+        </points>
+      </value>
+      <alternative ref="6"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="11"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="2.0" y="0.54550000"/>
+          <point x="5.0" y="0.38380000"/>
+          <point x="5.0" y="0.07070000"/>
+        </points>
+      </value>
+      <alternative ref="6"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="12"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.35120000"/>
+          <point x="1.0" y="0.58120000"/>
+          <point x="10.0" y="0.03490000"/>
+          <point x="4.0" y="0.03270000"/>
+        </points>
+      </value>
+      <alternative ref="6"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="13"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.37110000"/>
+          <point x="1.0" y="0.27980000"/>
+          <point x="4.0" y="0.31240000"/>
+          <point x="12.0" y="0.03670000"/>
+        </points>
+      </value>
+      <alternative ref="6"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="14"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.42910000"/>
+          <point x="3.0" y="0.37890000"/>
+          <point x="7.0" y="0.19200000"/>
+        </points>
+      </value>
+      <alternative ref="6"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="10"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="1.0" y="0.15870000"/>
+          <point x="2.0" y="0.00650000"/>
+          <point x="3.0" y="0.11710000"/>
+          <point x="4.0" y="0.01200000"/>
+          <point x="6.0" y="0.18850000"/>
+          <point x="8.0" y="0.12200000"/>
+          <point x="10.0" y="0.03490000"/>
+          <point x="12.0" y="0.03590000"/>
+          <point x="15.0" y="0.03570000"/>
+          <point x="16.0" y="0.00010000"/>
+          <point x="24.0" y="0.28860000"/>
+        </points>
+      </value>
+      <alternative ref="7"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="11"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="2.0" y="0.31960000"/>
+          <point x="5.0" y="0.48940000"/>
+          <point x="5.0" y="0.19100000"/>
+        </points>
+      </value>
+      <alternative ref="7"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="12"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.68660000"/>
+          <point x="1.0" y="0.00030000"/>
+          <point x="4.0" y="0.15700000"/>
+          <point x="10.0" y="0.15610000"/>
+        </points>
+      </value>
+      <alternative ref="7"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="13"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.22400000"/>
+          <point x="1.0" y="0.20390000"/>
+          <point x="4.0" y="0.45010000"/>
+          <point x="12.0" y="0.12200000"/>
+        </points>
+      </value>
+      <alternative ref="7"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="14"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.77800000"/>
+          <point x="3.0" y="0.06590000"/>
+          <point x="7.0" y="0.15610000"/>
+        </points>
+      </value>
+      <alternative ref="7"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="10"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="1.0" y="0.32300000"/>
+          <point x="2.0" y="0.23180000"/>
+          <point x="3.0" y="0.11710000"/>
+          <point x="4.0" y="0.28860000"/>
+          <point x="5.0" y="0.00460000"/>
+          <point x="8.0" y="0.03490000"/>
+        </points>
+      </value>
+      <alternative ref="8"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="11"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.48360000"/>
+          <point x="5.0" y="0.18790000"/>
+          <point x="2.0" y="0.32850000"/>
+        </points>
+      </value>
+      <alternative ref="8"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="12"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.84700000"/>
+          <point x="1.0" y="0.15300000"/>
+        </points>
+      </value>
+      <alternative ref="8"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="13"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.32770000"/>
+          <point x="1.0" y="0.66680000"/>
+          <point x="4.0" y="0.00090000"/>
+          <point x="26.0" y="0.00460000"/>
+        </points>
+      </value>
+      <alternative ref="8"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="14"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.16200000"/>
+          <point x="3.0" y="0.83800000"/>
+        </points>
+      </value>
+      <alternative ref="8"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="10"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.43990000"/>
+          <point x="1.0" y="0.35790000"/>
+          <point x="2.0" y="0.16260000"/>
+          <point x="4.0" y="0.03960000"/>
+        </points>
+      </value>
+      <alternative ref="9"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="11"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.99430000"/>
+          <point x="2.0" y="0.00570000"/>
+        </points>
+      </value>
+      <alternative ref="9"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="12"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="1.00000000"/>
+        </points>
+      </value>
+      <alternative ref="9"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="13"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="0.05280000"/>
+          <point x="1.0" y="0.74990000"/>
+          <point x="4.0" y="0.19270000"/>
+          <point x="12.0" y="0.00460000"/>
+        </points>
+      </value>
+      <alternative ref="9"/>
+    </measurement>
+    <measurement>
+      <criterion class="outrankingCriterion" ref="14"/>
+      <value class="fi.smaa.jsmaa.model.DiscreteMeasurement">
+        <points>
+          <point x="0.0" y="1.00000000"/>
+        </points>
+      </value>
+      <alternative ref="9"/>
+    </measurement>
+  </measurements>
+<preferences class="ordinalPreferences" id="15">
+		<preference>
+			<criterion class="outrankingCriterion" ref="10"/>
+			<value class="rank" rank="2"/>
+		</preference>
+		<preference>
+			<criterion class="outrankingCriterion" ref="11"/>
+			<value class="rank" rank="1"/>
+		</preference>
+		<preference>
+			<criterion class="outrankingCriterion" ref="12"/>
+			<value class="rank" rank="4"/>
+		</preference>
+		<preference>
+			<criterion class="outrankingCriterion" ref="13"/>
+			<value class="rank" rank="3"/>
+		</preference>
+		<preference>
+			<criterion class="outrankingCriterion" ref="14"/>
+			<value class="rank" rank="5"/>
+		</preference>
+	</preferences>
+	<lambda end="0.85" start="0.65"/>
+	<categories>
+		<category id="16" name="Likely"/>
+		<category id="17" name="Possible"/>
+		<category id="18" name="Unlikely"/>
+	</categories>
+	<upperBounds>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="10"/>
+			<value class="exact" value="2.0"/>
+			<alternative ref="16"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="10"/>
+			<value class="exact" value="4.0"/>
+			<alternative ref="17"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="11"/>
+			<value class="exact" value="2.0"/>
+			<alternative ref="16"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="11"/>
+			<value class="exact" value="4.0"/>
+			<alternative ref="17"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="12"/>
+			<value class="exact" value="2.0"/>
+			<alternative ref="16"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="12"/>
+			<value class="exact" value="4.0"/>
+			<alternative ref="17"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="13"/>
+			<value class="exact" value="2.0"/>
+			<alternative ref="16"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="13"/>
+			<value class="exact" value="4.0"/>
+			<alternative ref="17"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="14"/>
+			<value class="exact" value="2.0"/>
+			<alternative ref="16"/>
+		</measurement>
+		<measurement>
+			<criterion class="outrankingCriterion" ref="14"/>
+			<value class="exact" value="4.0"/>
+			<alternative ref="17"/>
+		</measurement>
+	</upperBounds>
+</SMAA-TRI-model>
