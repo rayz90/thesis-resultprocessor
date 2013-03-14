@@ -1,0 +1,5 @@
+#surefire
+#Thu Mar 14 13:57:26 CET 2013
+user.dir=/home/raymondv/Dropbox/Master/Thesis/resultprocessor_impact/resultprocessor
+localRepository=/home/raymondv/.m2/repository
+basedir=/home/raymondv/Dropbox/Master/Thesis/resultprocessor_impact/resultprocessor
