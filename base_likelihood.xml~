@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<SMAA-TRI-model optimisticRule="true" name="SMAA-TRI Model" modelVersion="3">
+<SMAA-TRI-model optimisticRule="false" name="SMAA-TRI Model" modelVersion="3">
 	<alternatives>
 		<alternative id="0" name="Relay Attack"/>
 		<alternative id="1" name="Relay Attack with app"/>
